@@ -1,0 +1,28 @@
+//
+// Variables
+//
+
+// Paths
+$img-path: "../img";
+
+// Fonts
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$work-sans: 'Work Sans', $sans-serif;
+$space-mono: 'Space Mono', monospace;
+$heading-text: $space-mono;
+$body-text: $work-sans;
+
+// Colors
+$teal: #07eff3;
+$yellow: #eef46e;
+$dark-red: #d70e2f;
+$lime: #8bd76b;
+$pink: #f54768;
+$light: #fff;
+$dark: #000;
+
+// Breakpoints
+$bp-small: "(min-width: 320px) and (max-width: 799px)";
+$bp-medium: "(min-width: 800px) and (max-width: 991px)";
+$bp-medium-large: "(min-width: 992px) and (max-width: 1199px)";
+$bp-large: "(min-width: 1200px)";

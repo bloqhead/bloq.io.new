@@ -1,0 +1,43 @@
+//
+// Variables
+//
+
+@import 'variables';
+
+//
+// Vendor, patterns, etc.
+//
+
+// Vendor
+@import '_vendor/normalize';
+@import '_vendor/flexboxgrid';
+
+// Patterns
+@import '_patterns/utilities';
+@import '_patterns/navigation';
+@import '_patterns/typography';
+
+//
+// Base
+//
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #000;
+	color: #888;
+	font: normal 1.6rem/1.4 $body-text;
+}
+
+@media #{$bp-medium} {
+	body {
+		line-height: 1.6;
+	}
+}
