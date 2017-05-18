@@ -3,7 +3,8 @@
 	/**
 	 * Testing/debugging
 	 */
-	 console.log("Testing");
+	const thing = "thing";
+	console.log(thing);
 
 	/**
 	 * Hamburger

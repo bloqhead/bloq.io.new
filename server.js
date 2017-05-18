@@ -78,7 +78,7 @@ app.get('/work', workController.workGet);
 app.get('/contact', contactController.contactGet);
 app.post('/contact', contactController.contactPost);
 
-// Authorization pages
+// Auth pages
 app.get('/account', userController.ensureAuthenticated, userController.accountGet);
 app.put('/account', userController.ensureAuthenticated, userController.accountPut);
 app.delete('/account', userController.ensureAuthenticated, userController.accountDelete);

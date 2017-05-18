@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     flatten: true,
-                    cwd: 'scss',
+                    cwd: 'src/scss',
                     src: [
                         '**/*.scss'
                     ],
@@ -35,14 +35,42 @@ module.exports = function(grunt) {
             }
         },
 
+        // PostCSS
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('pixrem')(),
+                    require('autoprefixer')({ browsers: 'last 2 versions' })
+                ]
+            },
+            dist: {
+                src: 'public/css/*.css'
+            }
+        },
+
+        // Babel
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: [ 'es2015' ]
+            },
+            dist: {
+                files: [{
+                    expand: false,
+                    src: [ 'src/js/app.js' ],
+                    dest: 'public/js/app.js',
+                    ext: '.js'
+                }]
+            }
+        },
+
         // Concatenation
         concat: {
             dist: {
                 files: {
                     'public/js/vendor.js': [
-                        'public/js/vendor/**/*.js',
-                        '!public/js/main.js',
-                        '!public/js/main.min.js'
+                        'src/js/vendor/**/*.js'
                     ]
                 },
                 options: {
@@ -55,9 +83,9 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'public/js/main.min.js': [
-                        'public/js/main.js',
-                        '!public/js/main.min.js'
+                    'public/js/app.min.js': [
+                        'public/js/app.js',
+                        '!public/js/app.min.js'
                     ]
                 }
             }
@@ -68,13 +96,13 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     src: [
-                        'public/js/**/*.js',
-                        'scss/**/*.scss',
+                        'src/js/**/*.js',
+                        'src/scss/**/*.scss',
                         '*.html'
                     ]
                 },
                 options: {
-                    port: '<%= pkg.browsersync_port %>',
+                    port: '3001',
                     open: 'ui',
                     watchTask: true,
                     injectChanges: true
@@ -86,20 +114,22 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: [
-                    'public/js/**/*.js',
-                    '!public/js/main.js',
-                    '!public/js/main.min.js'
+                    'src/js/**/*.js',
+                    // '!src/js/app.js',
+                    '!src/js/app.min.js'
                 ],
                 tasks: [
+                    'babel',
                     'concat'
                 ]
             },
             styles: {
                 files: [
-                    'scss/**/*.scss'
+                    'src/scss/**/*.scss'
                 ],
                 tasks: [
-                    'sass'
+                    'sass',
+                    'postcss'
                 ]
             },
             options: {
@@ -109,15 +139,17 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-newer');
+    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
 
     // Default task
-    grunt.registerTask('default', [ 'newer:sass', 'newer:concat' ]);
+    grunt.registerTask('default', [ 'newer:sass', 'newer:postcss', 'newer:babel', 'newer:concat' ]);
 
     // When you want BrowserSync
     grunt.registerTask('dev', [ 'browserSync', 'watch' ]);

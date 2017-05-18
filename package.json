@@ -1,52 +1,54 @@
 {
-	"name": "bloq.io",
-	"version": "1.0.0",
-	"description": "Bloq.io website.",
-	"private": true,
-	"scripts": {
-		"build": "npm-run-all build:*",
-		"build:css": "node-sass scss/main.scss > public/css/main.css",
-		"postinstall": "npm run build",
-		"start": "node server.js",
-		"watch": "npm-run-all --parallel watch:*",
-		"watch:css": "nodemon -e scss -w scss -x npm run build:css"
-	},
-	"dependencies": {
-		"async": "^1.5.2",
-		"bcrypt-nodejs": "^0.0.3",
-		"body-parser": "^1.15.1",
-		"compression": "^1.6.2",
-		"dotenv": "^2.0.0",
-		"express": "^4.13.4",
-		"express-flash": "0.0.2",
-		"express-session": "^1.2.1",
-		"express-validator": "^2.20.4",
-		"method-override": "^2.3.5",
-		"mongoose": "^4.4.8",
-		"morgan": "^1.7.0",
-		"node-sass": "^3.6.0",
-		"nodemailer": "^2.3.0",
-		"nodemon": "^1.9.1",
-		"npm-run-all": "^1.8.0",
-		"nunjucks": "^2.4.1",
-		"passport": "^0.3.2",
-		"passport-google-oauth": "^1.0.0",
-		"passport-local": "^1.0.0",
-		"grunt": "latest",
-		"grunt-browser-sync": "latest",
-		"grunt-contrib-sass": "latest",
-		"grunt-contrib-concat": "latest",
-		"grunt-contrib-cssmin": "latest",
-		"grunt-newer": "latest",
-		"grunt-contrib-uglify": "latest",
-		"grunt-contrib-watch": "latest",
-		"grunt-sass-globbing": "latest",
-		"time-grunt": "latest"
-	},
-	"devDependencies": {
-
-	},
-	"engines": {
-		"node": "6.1.0"
-	}
+  "name": "bloq.io",
+  "version": "1.0.0",
+  "description": "Bloq.io website.",
+  "private": true,
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:css": "node-sass scss/main.scss > public/css/main.css",
+    "postinstall": "npm run build",
+    "start": "node server.js",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "nodemon -e scss -w scss -x npm run build:css"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.15.1",
+    "compression": "^1.6.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.2.1",
+    "express-validator": "^2.20.4",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.8",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.6.0",
+    "nodemailer": "^2.3.0",
+    "nodemon": "^1.9.1",
+    "npm-run-all": "^1.8.0",
+    "nunjucks": "^2.4.1",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-browser-sync": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-newer": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-sass-globbing": "latest",
+    "time-grunt": "latest",
+    "babel-preset-es2015": "^6.24.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-postcss": "^0.8.0"
+  },
+  "engines": {
+    "node": "6.1.0"
+  }
 }
