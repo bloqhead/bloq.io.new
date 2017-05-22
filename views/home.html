@@ -1,42 +1,34 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<div class="container content">
 
-	<div class="intro">
-		<!-- @todo something interesting -->
-	</div> <!-- .intro -->
+	<div class="content">
+		<div class="content-inner">
 
-	<div class="work">
-
-		<article class="work__item">
-			<a href="#" class="work__item-link">
-				<img class="work__item-image" src="http://placehold.it/400x400" alt="Work Item">
-				<div class="work__item-info">
-					<h3 class="work__item-title">Work Item Title</h3>
+			<div class="intro">
+				<h1 class="brush intro__title">Daryn St. Pierre</h1>
+				<div class="intro__summary">
+					<p>I am a Front-End Developer that tinkers in </p>
 				</div>
-			</a>
-		</article>
+			</div> <!-- .intro -->
 
-		<article class="work__item">
-			<a href="#" class="work__item-link">
-				<img class="work__item-image" src="http://placehold.it/400x400" alt="Work Item">
-				<div class="work__item-info">
-					<h3 class="work__item-title">Work Item Title</h3>
-				</div>
-			</a>
-		</article>
+			<h1>Heading 1</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a, sequi quibusdam dignissimos, autem rem excepturi voluptatum inventore quidem. At doloremque iste iusto modi voluptatibus reprehenderit distinctio cumque, ab deserunt.</p>
+			<h2>Heading 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat, neque minus, illum eligendi voluptate inventore dicta consectetur facilis id nesciunt ullam quos officia eveniet quis a. Facilis, fugiat iure.</p>
+			<h3>Heading 3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, veritatis, nemo. Cum laudantium esse dolorem mollitia, temporibus repellendus accusantium culpa. Esse cum quae, dignissimos quam atque inventore beatae accusantium reiciendis.</p>
+			<h4>Heading 4</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora modi vitae exercitationem itaque error nemo necessitatibus, repellendus illo quidem. Aut asperiores, amet recusandae harum dolores veniam nisi autem quia.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque obcaecati, recusandae corporis animi! Itaque nisi, debitis, aliquid maxime rem sit tempora dolorum asperiores. Molestiae, saepe quos et animi quisquam inventore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque error, exercitationem quos voluptatibus vel ipsa sed nihil quas facilis in voluptatem. Ullam aut dolorem quod minus illum modi numquam culpa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus porro ad asperiores assumenda aliquid et culpa quod, omnis necessitatibus labore, deserunt temporibus dolore molestias qui corporis, ullam quis! Assumenda, sit.</p>
+			<h5>Heading 5</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, sint a veniam, officiis saepe harum doloremque enim alias sit excepturi impedit ipsa, id amet. Saepe nam eius illo aliquam accusamus!</p>
+			<h6>Heading 6</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum veritatis tenetur quia, voluptas at error tempora vel amet ad voluptate dolorem, unde, provident molestiae, rem. Quam corporis modi explicabo fugiat.</p>
 
-		<article class="work__item">
-			<a href="#" class="work__item-link">
-				<img class="work__item-image" src="http://placehold.it/400x400" alt="Work Item">
-				<div class="work__item-info">
-					<h3 class="work__item-title">Work Item Title</h3>
-				</div>
-			</a>
-		</article>
+		</div> <!-- .content-inner -->
+	</div>  <!-- .content -->
 
-	</div> <!-- .work -->
+	{% include 'partials/work.html' %}
 
-</div> <!-- .container -->
 {% endblock %}

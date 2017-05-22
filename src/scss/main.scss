@@ -1,43 +1,38 @@
 //
+// Google Fonts
+//
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Overpass+Mono:400,700';
+
+//
 // Variables
 //
 
 @import 'variables';
 
 //
-// Vendor, patterns, etc.
+// Mixins
 //
 
+@import 'mixins';
+
+//
 // Vendor
+//
+
 @import '_vendor/normalize';
 @import '_vendor/flexboxgrid';
+@import '_vendor/base-scss/base';
 
-// Patterns
+//
+// Base + Patterns
+//
+
+@import 'base';
+@import '_patterns/animation';
 @import '_patterns/utilities';
+@import '_patterns/structure';
 @import '_patterns/navigation';
 @import '_patterns/typography';
-
-//
-// Base
-//
-
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
-html {
-	font-size: 62.5%;
-}
-
-body {
-	background-color: #000;
-	color: #888;
-	font: normal 1.6rem/1.4 $body-text;
-}
-
-@media #{$bp-medium} {
-	body {
-		line-height: 1.6;
-	}
-}
+@import '_patterns/work-grid';
+@import '_patterns/social';

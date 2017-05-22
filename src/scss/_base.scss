@@ -1,0 +1,37 @@
+//
+// Base
+//
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $dark;
+	background-size: 50px 50px;
+	background-attachment: fixed;
+	background-image:
+		linear-gradient(
+			90deg,
+			rgba($mid, 0.75) $grid-square,
+			transparent $grid-square
+		),
+		linear-gradient(
+			rgba($mid, 0.75) $grid-square,
+			transparent $grid-square
+		);
+	color: #888;
+	font: normal 1.6rem/1.4 $open-sans;
+	@include cleartext;
+}
+
+@media #{$bp-medium} {
+	body {
+		line-height: 1.6;
+	}
+}

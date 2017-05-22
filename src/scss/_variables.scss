@@ -7,22 +7,28 @@ $img-path: "../img";
 
 // Fonts
 $sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$work-sans: 'Work Sans', $sans-serif;
-$space-mono: 'Space Mono', monospace;
-$heading-text: $space-mono;
-$body-text: $work-sans;
+$open-sans: "Open Sans", $sans-serif;
+$overpass-mono: "Overpass Mono", monospace;
+$heading-text: $overpass-mono;
 
 // Colors
 $teal: #07eff3;
 $yellow: #eef46e;
-$dark-red: #d70e2f;
+$red: #d70e2f;
 $lime: #8bd76b;
 $pink: #f54768;
 $light: #fff;
+$mid: #222;
 $dark: #000;
 
 // Breakpoints
 $bp-small: "(min-width: 320px) and (max-width: 799px)";
-$bp-medium: "(min-width: 800px) and (max-width: 991px)";
-$bp-medium-large: "(min-width: 992px) and (max-width: 1199px)";
+$bp-medium: "(min-width: 800px)";
+$bp-medium-large: "(min-width: 992px)";
 $bp-large: "(min-width: 1200px)";
+
+// Misc
+$sidebar-padding: 2em;
+$sidebar-width: 10em;
+$content-width: calc( 100% - $sidebar-width );
+$grid-square: 2%;

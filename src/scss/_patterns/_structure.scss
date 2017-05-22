@@ -1,0 +1,60 @@
+//
+// Structure
+//
+
+// Content
+.content {
+
+}
+
+// Sidebar
+.sidebar {
+	position: relative;
+	height: 100vh;
+	background: rgba($mid, 0.85);
+	padding: $sidebar-padding;
+}
+
+// Logo
+.logo {
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+
+	svg {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+// Footer
+footer {
+	font-size: 0.7em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	border-top: 1px dotted $mid;
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media #{$bp-medium} {
+	.content, footer {
+		width: $content-width;
+		padding: 4em 8em;
+	}
+
+	.content-inner, .footer-inner {
+		margin-left: $sidebar-width;
+	}
+
+	.sidebar {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: $sidebar-width;
+	}
+}

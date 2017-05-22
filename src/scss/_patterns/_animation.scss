@@ -1,0 +1,13 @@
+//
+// Animation
+//
+
+@keyframes prettyColors {
+	0% 	{ color: $pink; }
+	15% 	{ color: $teal; }
+	30% 	{ color: $yellow; }
+	45% 	{ color: $red; }
+	60% 	{ color: $lime; }
+	75% 	{ color: $teal; }
+	100% 	{ color: $pink; }
+}
