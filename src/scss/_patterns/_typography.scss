@@ -4,9 +4,11 @@
 
 // Links
 a {
+	color: $lime;
+	transition: all 0.2s ease-in-out;
 
 	&:hover, &:active {
-
+		color: $yellow;
 	}
 
 	&:focus {

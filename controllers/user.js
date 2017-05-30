@@ -23,7 +23,8 @@ exports.loginGet = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/login', {
-    title: 'Log in'
+    title: 'Log in',
+    class: 'login'
   });
 };
 
@@ -70,7 +71,8 @@ exports.signupGet = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/signup', {
-    title: 'Sign up'
+    title: 'Sign up',
+    class: 'sign-up'
   });
 };
 
@@ -114,7 +116,8 @@ exports.signupPost = function(req, res, next) {
  */
 exports.accountGet = function(req, res) {
   res.render('account/profile', {
-    title: 'My Account'
+    title: 'My Account',
+    class: 'my-account'
   });
 };
 
@@ -193,7 +196,7 @@ exports.unlink = function(req, res, next) {
         break;
       case 'github':
           user.github = undefined;
-        break;      
+        break;
       default:
         req.flash('error', { msg: 'Invalid OAuth Provider' });
         return res.redirect('/account');
@@ -213,7 +216,8 @@ exports.forgotGet = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/forgot', {
-    title: 'Forgot Password'
+    title: 'Forgot Password',
+    class: 'forgot-password'
   });
 };
 
@@ -262,7 +266,7 @@ exports.forgotPost = function(req, res, next) {
       });
       var mailOptions = {
         to: user.email,
-        from: 'support@yourdomain.com',
+        from: 'support@bloq.io',
         subject: '✔ Reset your password on Mega Boilerplate',
         text: 'You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n' +
         'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
@@ -292,7 +296,8 @@ exports.resetGet = function(req, res) {
         return res.redirect('/forgot');
       }
       res.render('account/reset', {
-        title: 'Password Reset'
+        title: 'Password Reset',
+        class: 'password-reset'
       });
     });
 };

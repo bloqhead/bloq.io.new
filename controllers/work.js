@@ -3,6 +3,7 @@
  */
 exports.workGet = function(req, res) {
 	res.render('work', {
-		title: 'Work'
+		title: 'Work',
+		class: 'work'
 	});
 };

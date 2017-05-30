@@ -21,6 +21,10 @@ $light: #fff;
 $mid: #222;
 $dark: #000;
 
+// Brand colors
+$github: #c6cbd1;
+$twitter: #1da1f2;
+
 // Breakpoints
 $bp-small: "(min-width: 320px) and (max-width: 799px)";
 $bp-medium: "(min-width: 800px)";
@@ -28,7 +32,7 @@ $bp-medium-large: "(min-width: 992px)";
 $bp-large: "(min-width: 1200px)";
 
 // Misc
-$sidebar-padding: 2em;
-$sidebar-width: 10em;
+$sidebar-padding: 1.25em;
+$sidebar-width: 14em;
 $content-width: calc( 100% - $sidebar-width );
 $grid-square: 2%;

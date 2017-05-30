@@ -3,25 +3,54 @@
 //
 
 .social {
-	position: absolute;
-	bottom: 4em;
+	display: block;
+	background: rgba($dark, 0.5);
+	font-size: 1.6em;
 	text-align: center;
-	border: 1px solid red;
+	margin: 0.75em 0;
+	padding: 0.25em;
+	border-radius: 5px;
+
+	&:hover a {
+		opacity: 0.75;
+		transform: scale(0.8);
+	}
 
 	ul {
-		display: block;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		@include list-reset;
 	}
 
 	li {
-		display: inline-block;
+		flex: 1;
+		align-self: stretch;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+
+		&.social-link--codepen {
+			color: $light;
+		}
+
+		&.social-link--twitter {
+			color: $twitter;
+		}
+
+		&.social-link--github {
+			color: $github;
+		}
+
+		&:hover {
+			color: $yellow;
+			transform: scale(1.15);
+		}
 	}
 
 	span {
-		font-size: 0;
-		color: transparent;
-		width: 0;
-		height: 0;
-		overflow: hidden;
+		display: none;
 	}
 }

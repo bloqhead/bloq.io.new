@@ -11,3 +11,36 @@
 	75% 	{ color: $teal; }
 	100% 	{ color: $pink; }
 }
+
+@keyframes bracketRight {
+	from {
+		opacity: 0;
+		transform: translateX(0.5em) scale(0.85);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+}
+
+@keyframes bracketLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-0.5em) scale(0.85);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+}
+
+@keyframes skateDeck {
+	from {
+		opacity: 0;
+		transform: translateY(1em) rotate(-20deg)  scale(2);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) rotate(0deg)  scale(1);
+	}
+}
