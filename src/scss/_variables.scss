@@ -10,6 +10,7 @@ $sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $open-sans: "Open Sans", $sans-serif;
 $overpass-mono: "Overpass Mono", monospace;
 $heading-text: $overpass-mono;
+$road-rage: "Road Rage", $heading-text;
 
 // Colors
 $teal: #07eff3;
@@ -19,6 +20,7 @@ $lime: #8bd76b;
 $pink: #f54768;
 $light: #fff;
 $mid: #222;
+$shade: #555;
 $dark: #000;
 
 // Brand colors
@@ -28,7 +30,9 @@ $twitter: #1da1f2;
 // Breakpoints
 $bp-small: "(min-width: 320px) and (max-width: 799px)";
 $bp-medium: "(min-width: 800px)";
+$bp-medium-max: "(max-width: 800px)";
 $bp-medium-large: "(min-width: 992px)";
+$bp-medium-large-max: "(max-width: 992px)";
 $bp-large: "(min-width: 1200px)";
 
 // Misc
@@ -36,3 +40,5 @@ $sidebar-padding: 1.25em;
 $sidebar-width: 14em;
 $content-width: calc( 100% - $sidebar-width );
 $grid-square: 2%;
+$radius: 5px;
+$panel-bg: rgba($mid, 0.5);

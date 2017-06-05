@@ -1,0 +1,115 @@
+//
+// Badges
+//
+
+.badges {
+	@include panel;
+
+	body.home & {
+		margin-top: 0;
+	}
+}
+
+.badges__header {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+
+	#{$headings} {
+
+		@include retroTitle {
+			margin: 0;
+			transform: skewY(-3deg);
+		};
+	}
+
+	@media #{$bp-medium} {
+		position: absolute;
+		top: 0; left: 0;
+		height: 0;
+		overflow: visible;
+		transform: translateY(-2.5em);
+	}
+}
+
+.badges__item {
+	$max: 10;
+
+	display: flex;
+	align-items: center;
+	overflow: visible;
+	padding: 3em;
+	transition: all 0.3s ease-in-out;
+
+	img {
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	@media #{$bp-large} {
+
+		&:not(:last-of-type) {
+			position: relative;
+
+			&:after {
+				position: absolute;
+				top: 50%; right: 0;
+				display: block;
+				content: "";
+				height: 6em;
+				width: 5px;
+				background: $mid;
+				border-radius: $radius;
+				transform: translateY(-50%) rotateX(-45deg);
+				transform-origin: center;
+				opacity: 0;
+				animation: fadeIn 1s forwards ease 1;
+				animation-delay: 2s;
+			}
+		}
+	}
+
+	@media #{$bp-medium} {
+		transform: scale(0);
+		opacity: 0;
+		animation: scaleBounce 0.8s forwards ease 1;
+		transform-origin: 50% 50%;
+		perspective: 300px;
+
+		@for $i from 1 through $max {
+			&:nth-of-type(#{$i}) {
+				@if $i == 1 {
+					animation-delay: 0s;
+				}
+				@else {
+					animation-delay: #{($i / 3)}s;
+				}
+			}
+		}
+	}
+}
+
+.badges__item-link {
+	display: block;
+	width: 100%;
+
+	@media #{$bp-medium} {
+		img {
+			transition: all 0.3s ease-in-out;
+			transform-origin: 50% 50%;
+		}
+
+		&:hover, &:active, &:focus {
+
+			img {
+				transform: scale(1.12);
+			}
+		}
+	}
+}

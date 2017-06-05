@@ -1,34 +1,28 @@
 {% extends 'layout.html' %}
 
+{% block masthead %}
+<header class="masthead">
+	<div class="masthead__inner row">
+		<div class="col-sm-5">
+			<div class="clipped">
+				<div class="clipped__content clipped__area">
+					<img src="/img/me.jpg" alt="Daryn's Face">
+				</div>
+				<div class="clipped__shadow clipped__area"></div>
+			</div>
+		</div>
+		<div class="col-sm-7">
+			<h1 class="masthead__title">Hello</h1>
+			<div class="masthead__blurb">
+				<p>My name is Daryn St. Pierre. I build websites at <a href="https://bigseadesign.com">Big Sea</a> in sunny St. Petersburg, Florida.</p>
+			</div>
+		</div>
+	</div>
+</header>
+{% endblock %}
+
 {% block body %}
 
-	<div class="content">
-		<div class="content-inner">
-
-			<div class="intro">
-				<h1 class="brush intro__title">Daryn St. Pierre</h1>
-				<div class="intro__summary">
-					<p>I am a Front-End Developer that tinkers in </p>
-				</div>
-			</div> <!-- .intro -->
-
-			<h1>Heading 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a, sequi quibusdam dignissimos, autem rem excepturi voluptatum inventore quidem. At doloremque iste iusto modi voluptatibus reprehenderit distinctio cumque, ab deserunt.</p>
-			<h2>Heading 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat, neque minus, illum eligendi voluptate inventore dicta consectetur facilis id nesciunt ullam quos officia eveniet quis a. Facilis, fugiat iure.</p>
-			<h3>Heading 3</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, veritatis, nemo. Cum laudantium esse dolorem mollitia, temporibus repellendus accusantium culpa. Esse cum quae, dignissimos quam atque inventore beatae accusantium reiciendis.</p>
-			<h4>Heading 4</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tempora modi vitae exercitationem itaque error nemo necessitatibus, repellendus illo quidem. Aut asperiores, amet recusandae harum dolores veniam nisi autem quia.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque obcaecati, recusandae corporis animi! Itaque nisi, debitis, aliquid maxime rem sit tempora dolorum asperiores. Molestiae, saepe quos et animi quisquam inventore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque error, exercitationem quos voluptatibus vel ipsa sed nihil quas facilis in voluptatem. Ullam aut dolorem quod minus illum modi numquam culpa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus porro ad asperiores assumenda aliquid et culpa quod, omnis necessitatibus labore, deserunt temporibus dolore molestias qui corporis, ullam quis! Assumenda, sit.</p>
-			<h5>Heading 5</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, sint a veniam, officiis saepe harum doloremque enim alias sit excepturi impedit ipsa, id amet. Saepe nam eius illo aliquam accusamus!</p>
-			<h6>Heading 6</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum veritatis tenetur quia, voluptas at error tempora vel amet ad voluptate dolorem, unde, provident molestiae, rem. Quam corporis modi explicabo fugiat.</p>
-
-		</div> <!-- .content-inner -->
-	</div>  <!-- .content -->
-
-	{# include 'partials/work.html' #}
+	{% include 'partials/badges.html' %}
 
 {% endblock %}

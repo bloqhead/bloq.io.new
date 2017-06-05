@@ -2,7 +2,11 @@
 // Base
 //
 
-html, body {
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body, main {
 	width: 100%;
 	height: 100%;
 }
@@ -26,7 +30,7 @@ body {
 			transparent $grid-square
 		);
 	color: #888;
-	font: normal 1.6rem/1.4 $open-sans;
+	font: normal 1.6em/1.4 $open-sans;
 	@include cleartext;
 }
 

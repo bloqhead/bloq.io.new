@@ -31,6 +31,7 @@
 	a {
 		display: block;
 		text-decoration: none;
+		transition: all 0.2s ease-in-out;
 
 		&.social-link--codepen {
 			color: $light;
@@ -42,6 +43,10 @@
 
 		&.social-link--github {
 			color: $github;
+		}
+
+		&.social-link--contact {
+			color: $yellow;
 		}
 
 		&:hover {

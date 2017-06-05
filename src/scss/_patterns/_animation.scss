@@ -2,6 +2,7 @@
 // Animation
 //
 
+// Pretty color changing effects for text
 @keyframes prettyColors {
 	0% 	{ color: $pink; }
 	15% 	{ color: $teal; }
@@ -12,6 +13,7 @@
 	100% 	{ color: $pink; }
 }
 
+// logo - bracket right
 @keyframes bracketRight {
 	from {
 		opacity: 0;
@@ -23,6 +25,7 @@
 	}
 }
 
+// logo - bracket left
 @keyframes bracketLeft {
 	from {
 		opacity: 0;
@@ -34,6 +37,7 @@
 	}
 }
 
+// logo - skate deck
 @keyframes skateDeck {
 	from {
 		opacity: 0;
@@ -42,5 +46,142 @@
 	to {
 		opacity: 1;
 		transform: translateY(0) rotate(0deg)  scale(1);
+	}
+}
+
+// text switcher thing
+@keyframes switcher {
+	0% {
+		opacity: 0;
+		transform: translateY(-1em);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(1em);
+	}
+}
+
+// hue rotator
+@keyframes hueRotor {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+// opacity effects
+@keyframes fader {
+	from {
+		opacity: 0.35;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// special title pseudo animations
+@keyframes titleBefore {
+	from {
+		opacity: 0;
+		transform: translate(0, 0) scale(0) rotate(0deg);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-0.3em, -0.35em) scale(1.15) rotate(20deg);
+	}
+}
+
+@keyframes titleAfter {
+	from {
+		opacity: 0;
+		transform: translate(0, 0) scale(0) rotate(0deg);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-0.2em, -0.15em) scale(0.75) rotate(15deg);
+	}
+}
+
+// Circular float effect
+@keyframes circular {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes circularReverse {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+// Scale bounce
+@keyframes scaleBounce {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(1.1);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	100% {
+		opacity: 1;
+		filter: hue-rotate(0deg);
+		transform: scale(1);
+	}
+}
+
+// Simple fades
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+// Scrolling effects
+@keyframes scrollH {
+	to {
+		background-position: 100% 0%;
+	}
+}
+
+@keyframes scrollV {
+	to {
+		background-position: 0% 100%;
+	}
+}
+
+@keyframes scrollSpinH {
+	to {
+		background-position: 100% 0%;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes scrollSpinV {
+	to {
+		background-position: 0% 100%;
+		transform: rotate(360deg);
 	}
 }

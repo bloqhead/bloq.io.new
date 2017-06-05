@@ -6,17 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
-		<title>{{title}} | Daryn St. Pierre | Front-End Web Developer</title>
+		<title>{% if title %}{{title}} | {% endif %}Daryn St. Pierre | Front-End Web Developer</title>
 		<script src="https://use.fontawesome.com/a4bc0a3d5c.js"></script>
 		<link rel="stylesheet" href="/css/main.css">
 	</head>
-	<body class="no-js {{class}}">
+	<body class="no-js{% if class %} {{class}}{% endif %}">
 
-		<main>
+		<main{% if title %} data-title="&mdash; {{title}} &mdash;{% endif %}">
 
-			{% include "partials/sidebar.html" %}
-			{% block body %}{% endblock %}
-			{% include "partials/footer.html" %}
+			{% block masthead %}{% endblock %}
+
+			<div class="content">
+				<div class="content-inner">
+					{% include "partials/sidebar.html" %}
+					{% block body %}{% endblock %}
+					{% include "partials/footer.html" %}
+				</div> <!-- .content-inner -->
+			</div>  <!-- .content -->
 
 		</main>
 

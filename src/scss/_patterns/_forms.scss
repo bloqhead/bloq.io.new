@@ -1,0 +1,118 @@
+//
+// Forms
+//
+
+form {
+	@include panel($color: $shade);
+	padding: 2em;
+}
+
+.input-wrap {
+	margin: 1em 0;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+label {
+	display: block;
+	padding: 0;
+	margin: 0.5em 0;
+	font-size: 0.75em;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+}
+
+@include allinputs {
+	display: block;
+	width: 100%;
+	background: $dark;
+	border: 2px solid $pink;
+	color: $pink;
+	padding: 0.5em;
+	border-radius: $radius $radius $radius 0;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+
+	+ label {
+		display: inline-block;
+		background: $pink;
+		border-radius: 0 0 $radius $radius;
+		padding: 0.5em 1em;
+		margin-top: 0;
+		color: $dark;
+	}
+
+	&:focus {
+		border-color: $lime;
+		color: $lime;
+
+		+ label {
+			background: $lime;
+		}
+	}
+
+	&:hover, &:active {
+		border-color: $yellow;
+		color: $yellow;
+
+		+ label {
+			background: $yellow;
+		}
+	}
+}
+
+button, .btn, input[type="submit"], input[type="reset"] {
+	$base: $pink;
+	$active: $yellow;
+	$timing: 0.2s;
+	$border: 8px;
+
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	background: $dark;
+	color: $base;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	border: 2px solid $base;
+	border-radius: $radius;
+	padding: 0.8em 1.5em;
+	margin: 0.5em 0;
+	transition: all $timing ease-in-out;
+	outline: none;
+	transform-origin: center;
+
+	&:after {
+		position: absolute;
+		bottom: 0;
+		display: block;
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: $border solid transparent;
+		border-right: $border solid transparent;
+		border-bottom: $border solid $base;
+		transform: translateX( calc(50% + #{$border}) );
+		transform-origin: 50% 50%;
+		transition: all 0.2s ease-in-out;
+		// transition-delay: 0.1s;
+	}
+
+	&:hover, &:focus, &:active {
+		color: $active;
+		border-color: $active;
+		transform: perspective(200px) rotateX(20deg);
+
+		&:after {
+			border-bottom-color: $active;
+		}
+	}
+}
