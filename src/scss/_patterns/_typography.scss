@@ -23,7 +23,7 @@ a {
 }
 
 // Links - targeted
-a:not(.nav-item):not(.social-link):not(.logo-link):not(.work-grid__item-link):not(.badges__item-link) {
+a:not(.nav-item):not(.social-link):not(.logo-link):not(.work-grid__item-link):not(.badges__item-link):not(.burger) {
 	$base: $lime;
 	$active: $yellow;
 	$opacity: 0.25;

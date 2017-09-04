@@ -15,7 +15,7 @@ nav, .nav {
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 0.1em;
-	font-size: 4em;
+	font-size: 3em;
 	font-family: $overpass-mono;
 
 	li {
@@ -28,8 +28,68 @@ nav, .nav {
 		padding: 0.35em;
 		transition: all 0.2s ease-in-out;
 	}
+}
 
-	@media #{$bp-medium} {
+.nav--utility {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 1.2rem;
+	font-weight: 600;
+
+	ul {
+		display: block;
+	}
+
+	li {
+		display: inline;
+	}
+
+	a {
+		display: inline-block;
+		color: $shade;
+		margin: 0 0.35em;
+
+		&:hover, &:focus, &:active {
+			color: $yellow;
+		}
+	}
+}
+
+@media #{$bp-medium-max} {
+	.mobile-nav-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		background: $dark;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+
+		&.is-active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.burger {
+		width: 30px;
+
+		svg .bar {
+			fill: $pink;
+		}
+
+		&.is-active svg .bar {
+			fill: $lime;
+		}
+	}
+}
+
+@media #{$bp-medium} {
+	.nav--main {
 		font-size: 1.6em;
 
 		li {
@@ -86,36 +146,12 @@ nav, .nav {
 					transform: scaleX(3);
 				}
 			}
-
 		}
 	}
-}
 
-.nav--utility {
-	position: absolute;
-	bottom: 3em;
-	width: calc( 100% - 2.5em );
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-size: 1.2rem;
-	font-weight: 600;
-
-	ul {
-		display: block;
-	}
-
-	li {
-		display: inline;
-	}
-
-	a {
-		display: inline-block;
-		color: $shade;
-		margin: 0 0.35em;
-
-		&:hover, &:focus, &:active {
-			color: $yellow;
-		}
+	.nav--utility {
+		position: absolute;
+		bottom: 3em;
+		width: calc( 100% - 2.5em );
 	}
 }

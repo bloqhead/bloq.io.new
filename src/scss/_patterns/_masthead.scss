@@ -13,7 +13,7 @@ $masthead-shift: 5em;
 	color: $dark;
 	font-size: 1.8rem;
 	margin: 0 0 1.5em 0;
-	transform: skewY(-#{$masthead-rotate}) translateY(-#{$masthead-shift});
+	transform: skewY(-#{$masthead-rotate}) translateY(-#{$masthead-shift / 2.75});
 
 	&:before {
 		$i: $masthead-shift / 2;
@@ -26,7 +26,6 @@ $masthead-shift: 5em;
 		opacity: 0.15;
 		background-position: top center;
 		transform: skewY($masthead-rotate);
-		// animation: scrollH 30s linear infinite alternate;
 	}
 }
 
@@ -36,7 +35,7 @@ $masthead-shift: 5em;
 	font-family: $road-rage;
 	color: $yellow;
 	text-shadow: 5px 5px 0 $dark;
-	transform: translateZ(0) translateY(0.12em) skewY(-3.5deg);
+	text-align: center;
 	margin: 0;
 	padding: 0;
 }
@@ -45,7 +44,6 @@ $masthead-shift: 5em;
 	background: $light;
 	padding: 0.8em;
 	margin: 0;
-	// border-radius: $radius;
 	box-shadow: 5px 5px 0 $yellow;
 	font-family: $overpass-mono;
 
@@ -62,14 +60,13 @@ $masthead-shift: 5em;
 .masthead__inner {
 	position: relative;
 	z-index: 1;
-	// background: $yellow;
-	padding: ( $masthead-shift * 2 ) 1em 1em 1em;
+	padding: 2em;
 	transform: skewY($masthead-rotate);
 }
 
 @media #{$bp-large} {
 	.masthead__inner {
-		max-width: 38em;
+		max-width: 42em;
 	}
 
 	.masthead__blurb {
@@ -77,12 +74,25 @@ $masthead-shift: 5em;
 	}
 }
 
+@media #{$bp-medium-max} {
+	.masthead__profile {
+		display: none;
+	}
+}
+
 @media #{$bp-medium} {
 	.masthead {
 		font-size: 2.1rem;
+		transform: skewY(-#{$masthead-rotate}) translateY(-#{$masthead-shift});
 	}
 
 	.masthead__inner {
+		padding: ( $masthead-shift * 2 ) 1em 1em 1em;
 		margin-left: $sidebar-width;
+	}
+
+	.masthead__title {
+		text-align: left;
+		transform: translateZ(0) translateY(0.12em) skewY(-3.5deg);
 	}
 }
