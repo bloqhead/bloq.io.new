@@ -20,12 +20,12 @@ function Burger() {
 	const navContainer = document.querySelector('.mobile-nav-container')
 	const activeClass = 'is-active'
 
-	burger.addEventListener( 'click', function(e) {
+	burger.addEventListener( 'click', (e) => {
 		e.preventDefault
 		this.classList.toggle(activeClass)
 		navContainer.classList.toggle(activeClass)
 		_Log('burger active')
-	})
+	}
 }
 
 Burger()
