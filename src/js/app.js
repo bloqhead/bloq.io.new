@@ -24,7 +24,6 @@ function Burger() {
 		e.preventDefault
 		this.classList.toggle(activeClass)
 		navContainer.classList.toggle(activeClass)
-		_Log('burger active')
 	}
 }
 

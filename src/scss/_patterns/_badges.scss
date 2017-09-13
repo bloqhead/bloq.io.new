@@ -41,7 +41,7 @@
 	display: flex;
 	align-items: center;
 	overflow: visible;
-	padding: 3em;
+	padding: 1.25em;
 	transition: all 0.3s ease-in-out;
 
 	img {
@@ -53,6 +53,7 @@
 	}
 
 	@media #{$bp-large} {
+		padding: 3em;
 
 		&:not(:last-of-type) {
 			position: relative;
