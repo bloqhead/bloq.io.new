@@ -13,6 +13,7 @@ $masthead-shift: 5em;
 	color: $dark;
 	font-size: 1.8rem;
 	margin: 0 0 1.5em 0;
+	padding-top: 3em;
 	transform: skewY(-#{$masthead-rotate}) translateY(-#{$masthead-shift / 2.75});
 
 	&:before {
@@ -43,7 +44,7 @@ $masthead-shift: 5em;
 .masthead__blurb {
 	background: $light;
 	padding: 0.8em;
-	margin: 0;
+	margin: 2em auto;
 	box-shadow: 5px 5px 0 $yellow;
 	font-family: $overpass-mono;
 
@@ -83,6 +84,7 @@ $masthead-shift: 5em;
 @media #{$bp-medium} {
 	.masthead {
 		font-size: 2.1rem;
+		padding-top: 0;
 		transform: skewY(-#{$masthead-rotate}) translateY(-#{$masthead-shift});
 	}
 
@@ -94,5 +96,9 @@ $masthead-shift: 5em;
 	.masthead__title {
 		text-align: left;
 		transform: translateZ(0) translateY(0.12em) skewY(-3.5deg);
+	}
+
+	.masthead__blurb {
+		margin: 0 auto;
 	}
 }

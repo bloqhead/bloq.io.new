@@ -2871,6 +2871,7 @@ button:hover:after, button:focus:after, button:active:after, .btn:hover:after, .
   font-size: 18px;
   font-size: 1.8rem;
   margin: 0 0 1.5em 0;
+  padding-top: 3em;
   -webkit-transform: skewY(-3deg) translateY(-1.81818em);
           transform: skewY(-3deg) translateY(-1.81818em);
 }
@@ -2907,7 +2908,7 @@ button:hover:after, button:focus:after, button:active:after, .btn:hover:after, .
 .masthead__blurb {
   background: #fff;
   padding: 0.8em;
-  margin: 0;
+  margin: 2em auto;
   -webkit-box-shadow: 5px 5px 0 #eef46e;
           box-shadow: 5px 5px 0 #eef46e;
   font-family: "Overpass Mono", monospace;
@@ -2946,6 +2947,7 @@ button:hover:after, button:focus:after, button:active:after, .btn:hover:after, .
 @media (min-width: 800px) {
   .masthead {
     font-size: 2.1rem;
+    padding-top: 0;
     -webkit-transform: skewY(-3deg) translateY(-5em);
             transform: skewY(-3deg) translateY(-5em);
   }
@@ -2959,6 +2961,10 @@ button:hover:after, button:focus:after, button:active:after, .btn:hover:after, .
     text-align: left;
     -webkit-transform: translateZ(0) translateY(0.12em) skewY(-3.5deg);
             transform: translateZ(0) translateY(0.12em) skewY(-3.5deg);
+  }
+
+  .masthead__blurb {
+    margin: 0 auto;
   }
 }
 .badges {

@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-newer');
+	// grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-babel');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -152,7 +152,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-browser-sync');
 
 	// Default task
-	grunt.registerTask('default', [ 'newer:sass', 'newer:postcss', 'newer:babel', 'newer:concat' ]);
+	grunt.registerTask('default', [ 'sass', 'postcss', 'babel', 'concat' ]);
 
 	// When you want BrowserSync
 	grunt.registerTask('dev', [ 'browserSync', 'watch' ]);
